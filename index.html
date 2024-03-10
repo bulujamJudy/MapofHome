@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Map of my Home by Judy</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="/img/icon.ico">
+    <link rel="icon" href="/img/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <style>
@@ -30,12 +30,36 @@
     .map{
         cursor: url(/img/cursor1.png), auto;
     }
+    
     .sidebar{
         cursor: url(/img/cursor2.png), auto;
     }
+    ::selection{
+        color: white;
+        background-color: black;
+    }
+    .loader {
+        position: fixed;
+        background-color: #000;
+        opacity: 1;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
 </style>
 <body class="container-fluid row h-100 overflow-hidden" style="margin: 0;padding: 0;">
-    <div class="sidebar bg-white container-sm text-center flex flex-col space-y-4 w-1/2 sm:w-1/4" style="position: relative; padding: 3vh; flex-direction: column;">
+    <div class="loader">
+        <h1 class="text-5xl font-semibold text-white" style="left:50%; top:40%; transform: translate(-50%,-60%); position:relative; text-align: center;">The Map of my Home</h1>
+        <p class="text-2xl text-white" style="position: absolute; left:50%; top:45%; transform: translate(-50%,-55%); text-align:center;">By: Judy</p>
+        <div class="d-flex justify-content-center" style="position: absolute; left:50%; top:50%; transform: translate(-50%,-50%);">
+            <div class="spinner-grow" role="status" style="width: 30rem; height: 30rem; ">
+            <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar bg-white container-sm text-center flex flex-col space-y-4 w-1/2 md:w-1/4" style="position: relative; padding: 3vh; flex-direction: column;">
         <header style="height:15vh;" class="grid gap-1 md:gap-10">
             <h1 class="text-2xl 2xl:text-5xl font-semibold">Map of my Home</h1>
             <div name="description of this website" class="overflow-hidden">
@@ -47,41 +71,41 @@
             <button type="button" class="btn btn-dark" disabled style="border-radius: 20px;">Blank</button>
 
             <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" onchange="aL()">
-            <label class="btn btn-outline-dark bg-stone-100" for="btncheck1" style="border-radius: 20px; padding-top: 5%;">Architectures</label>
+            <label class=" btn btn-outline-dark bg-stone-100 font-bold text-xl" for="btncheck1" style="border-radius: 20px; padding-top: 2vh; cursor: url(/img/cursor/Archi.png),auto; border-width: .25vh; height: 2vh;">Architectures</label>
 
             <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" onchange="bL()">
-            <label class="btn btn-outline-dark bg-stone-100" for="btncheck2" style="border-radius: 20px; padding-top: 5%;">Activeness</label>
+            <label class="btn btn-outline-dark bg-stone-100 font-bold text-xl" for="btncheck2" style="border-radius: 20px; padding-top: 2vh; cursor: url(/img/cursor/act.png),auto; height: 2vh;border-width: .25vh;">Activeness</label>
 
             <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" onchange="cL()">
-            <label class="btn btn-outline-dark bg-stone-100" for="btncheck3" style="border-radius: 20px; padding-top: 5%;">Elements</label>
+            <label class="btn btn-outline-dark bg-stone-100 font-bold text-xl" for="btncheck3" style="border-radius: 20px; padding-top: 2vh; cursor: url(/img/cursor/ele.png),auto; height: 2vh;border-width: .25vh;">Elements</label>
 
             <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off" onchange="dL()">
-            <label class="btn btn-outline-dark bg-stone-100" for="btncheck4" style="border-radius: 20px; padding-top: 5%;">Imagination</label>
+            <label class="btn btn-outline-dark bg-stone-100 font-bold text-xl" for="btncheck4" style="border-radius: 20px; padding-top: 2vh; cursor: url(/img/cursor/img.png),auto; height: 2vh;border-width: .25vh;">Imagination</label>
 
             <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off" onchange="eL()">
-            <label class="btn btn-outline-dark bg-stone-100" for="btncheck5" style="border-radius: 20px; padding-top: 5%;">Sounds</label>
+            <label class="btn btn-outline-dark bg-stone-100 font-bold text-xl" for="btncheck5" style="border-radius: 20px; padding-top: 2vh; cursor: url(/img/cursor/sou.png),auto; height: 2vh;border-width: .25vh;">Sounds</label>
 
             <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off" onchange="fL()">
-            <label class="btn btn-outline-dark bg-stone-100" for="btncheck6" style="border-radius: 20px; padding-top: 5%;">Smell</label>
+            <label class="btn btn-outline-dark bg-stone-100 font-bold text-xl" for="btncheck6" style="border-radius: 20px; padding-top: 2vh; cursor: url(/img/cursor/sme.png),auto; height: 2vh;border-width: .25vh;">Smell</label>
 
             <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off" onchange="gL()">
-            <label class="btn btn-outline-dark bg-stone-100" for="btncheck7" style="border-radius: 20px; padding-top: 5%;">Emotion</label>
+            <label class="btn btn-outline-dark bg-stone-100 font-bold text-xl" for="btncheck7" style="border-radius: 20px; padding-top: 2vh;cursor: url(/img/cursor/emo.png),auto; height: 2vh;border-width: .25vh;">Emotion</label>
         </div>
         
         <footer style="height:10vh;padding-top: 3vh;">
-            <p class="text-base">Made by <a href="https://github.com/bulujamJudy" class="hover:underline hover:decoration-sky-500 hover:text-pink-600" target="_blank">Judy Luo</a> in 2024</p>
+            <p class="text-base">Made by <a href="https://github.com/bulujamJudy" class="hover:bg-black hover:text-white ease-in-out duration-300" target="_blank">Judy Luo</a> in 2024</p>
         </footer>
     </div>
 
-    <div class="map overflow-y-scroll w-1/2 sm:w-3/4 object-center" style="height: 100vh; top: 0; right: 0; position: relative;">
-        <img src="img/7.png" alt="Architectures" id="0" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0;">
-        <img src="img/1.png" alt="Activeness" id="1" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0;">
-        <img src="img/2.png" alt="Elements" id="2" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0;">
-        <img src="img/3.png" alt="Imagination" id="3" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0;">
-        <img src="img/4.png" alt="Sounds" id="4" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0;">
-        <img src="img/5.png" alt="Smell" id="5" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0;">
-        <img src="img/6.png" alt="Emotion" id="6" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0;">
-        <img src="img/0.png" alt="Blank" id="7" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 100;">
+    <div class="map overflow-y-scroll w-1/2 md:w-3/4 object-center" style="height: 100vh; top: 0; right: 0; position: relative;">
+        <img src="img/7.png" alt="Architectures" id="0" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0; z-index: 8;">
+        <img src="img/1.png" alt="Activeness" id="1" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0; z-index: 7;">
+        <img src="img/2.png" alt="Elements" id="2" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0; z-index: 6;">
+        <img src="img/3.png" alt="Imagination" id="3" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0; z-index: 5;">
+        <img src="img/4.png" alt="Sounds" id="4" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0; z-index: 4;">
+        <img src="img/5.png" alt="Smell" id="5" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0; z-index: 3;">
+        <img src="img/6.png" alt="Emotion" id="6" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 0; z-index: 2;">
+        <img src="img/0.png" alt="Blank" id="7" style="width: 70%; pointer-events: none; margin-left: 15%;  position: absolute; opacity: 80%; z-index: 1;">
     </div>
     
     <canvas id="canvas1" style="
@@ -94,5 +118,37 @@
             </canvas>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-</body> 
+</body>
+<style>
+    .loader {
+    -webkit-animation: load-out 1s;
+    animation: load-out 1s;
+    animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    }
+
+    @-webkit-keyframes load-out {
+        from {
+            z-index: 10;
+            opacity: 1;
+        }
+        to {
+            z-index: -1;
+            opacity: 0;
+        }
+    }
+
+    @keyframes load-out {
+        from {
+            z-index: 10;
+            opacity: 1;
+        }
+
+        to {
+            z-index: -1;
+            opacity: 0;
+        }
+}
+</style>
 </html>
