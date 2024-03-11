@@ -36,7 +36,7 @@
     }
     ::selection{
         color: white;
-        background-color: black;
+        background-color: rgb(44, 44, 44);
     }
     .loader {
         position: fixed;
@@ -76,7 +76,7 @@
             </div>
         </header>
         <div class="btn-group-vertical overflow-hidden" role="group" aria-label="1" style="height:70vh; gap: 2vh;">
-            <div class="bg-zinc-800 text-white font-bold text-xl w-100" disabled style="padding: 1vh; cursor: url(/img/cursor/blank.png),auto;">Blank Space</div>
+            <div class="bg-zinc-800 text-white font-bold text-xl w-100" disabled style="padding: 1vh; cursor: url(/img/cursor/blank.png),auto;"><a href="about.html" class="hover:text-red-500 hover:underline hover:decoration-dotted">About This Project</a></div>
 
             <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" onchange="aL()">
             <label class=" btn btn-outline-dark bg-stone-100 font-bold text-xl" for="btncheck1" style="border-radius: 20px; padding-top: 2vh; cursor: url(/img/cursor/Archi.png),auto; border-width: .25vh; height: 2vh;">Architectures</label>
@@ -134,7 +134,7 @@
     .loader {
     -webkit-animation: load-out 1s;
     animation: load-out 1s;
-    animation-delay: 5s;
+    animation-delay: 3s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -webkit-animation-timing-function: ease-out;
