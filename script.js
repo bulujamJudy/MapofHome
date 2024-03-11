@@ -4,64 +4,82 @@ const b = document.querySelector('#btncheck2');
 const c = document.querySelector('#btncheck3');
 const d = document.querySelector('#btncheck4');
 const e = document.querySelector('#btncheck5');
-const h = document.querySelector('#btncheck6');
+const f = document.querySelector('#btncheck6');
 const g = document.querySelector('#btncheck7');
 
 function aL(){
-    if (!a.checked){
+    if (a.checked){
         //console.log("open ar layer");
-        document.getElementById('0').style.opacity = 0;
+        document.getElementById('0').style.opacity =100;
+        document.getElementById('map').style.cursor = 'url(/img/cursor/person.png),auto';
     } else {
         //console.log("close ar layer");
-        document.getElementById('0').style.opacity = 100;
+        document.getElementById('0').style.opacity = 0;
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personB.png),auto';
     }
 }
 
 function bL(){
-    if (!b.checked){
-        document.getElementById('1').style.opacity = 0;
-    } else {
+    if (b.checked){
         document.getElementById('1').style.opacity = 100;
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personAct.png),auto';
+    } else {
+        document.getElementById('1').style.opacity = 0;
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personB.png),auto';
     }
 }
 
 function cL(){
-    if (!c.checked){
-        document.getElementById('2').style.opacity = 0;
-    } else {
+    if (c.checked){
         document.getElementById('2').style.opacity = 100;
+        document.getElementById('2.5').style.opacity = .8;
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personC.png),auto';
+    } else {
+        document.getElementById('2').style.opacity = 0;
+        document.getElementById('2.5').style.opacity = 0;
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personB.png),auto';
     }
 }
 
 function dL(){
-    if (!d.checked){
-        document.getElementById('3').style.opacity = 0;
-    } else {
+    if (d.checked){
         document.getElementById('3').style.opacity = 100;
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personI.png),auto';
+    } else {
+        document.getElementById('3').style.opacity = 0;
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personB.png),auto';
     }
 }
 
 function eL(){
-    if (!e.checked){
-        document.getElementById('4').style.opacity = 0;
+    if (e.checked){
+        document.getElementById('4').volume = 0.5;
+        document.getElementById('4').play();
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personSo.png),auto';
     } else {
-        document.getElementById('4').style.opacity = 100;
+        document.getElementById('4').pause();
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personB.png),auto';
     }
 }
 
 function fL(){
-    if (!f.checked){
-        document.getElementById('5').style.opacity = 0;
+    if (f.checked){
+        document.getElementById('5').style.opacity = 1;
+        //console.log("print!");
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personSm.png),auto';
     } else {
-        document.getElementById('5').style.opacity = 100;
+        document.getElementById('5').style.opacity = 0;
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personB.png),auto';
     }
 }
 
 function gL(){
-    if (!g.checked){
-        document.getElementById('6').style.opacity = 0;
+    if (g.checked){
+        document.getElementById('6').style.opacity = 1;
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personE.png),auto';
     } else {
-        document.getElementById('6').style.opacity = 100;
+        document.getElementById('6').style.opacity = 0;
+        document.getElementById('map').style.cursor = 'url(/img/cursor/personB.png),auto';
     }
 }
 
