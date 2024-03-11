@@ -20,23 +20,31 @@
         color: white;
         background-color: rgb(44, 44, 44);
     }
+    .high{
+        display: inline-block;
+        padding:  0 .25em;
+        background-color: rgb(44, 44, 44);
+        color: white;
+    }
 </style>
 <body>
     <div class="container-sm  flex flex-col space-y-4" style="width: 70%; position: relative; background-color: white; align-self: center; margin-top: 10vh; padding: 3vh; flex-direction: column; padding-left: 5vw; padding-right: 5vw; gap: 2vh; padding-bottom: 20vh; ">
         <h1 class="text-center text-2xl 2xl:text-5xl font-semibold">About this project</h1>
         <p class="text-left text-pretty">
-            &emsp; What intrigues me is the contradiction between map and home. Since the concept of “home” is completely decided by the map maker, which is me, the map shouldn’t be as simple as those we use daily. The fundamental approach to making a map is simply recording the map maker’s journey in this space, which in this case, I have to bring my experience to the table.
+            &emsp; What intrigues me is the contradiction between <span class="high">map and home.</span> Since the concept of “home” is completely decided by the map maker, which is me, the map shouldn’t be as simple as those we use daily. The fundamental approach to making a map is simply recording the map maker’s <span class="high">journey</span> in this space, which in this case, I have to bring my experience to the table.
             </p>
-        <p class="text-left text-pretty">&emsp;Home is only formed once the person has a physical and mental connection to this place in the long term. For me, my exploration of home is mainly through three directions: senses, memory, and symbolism.
+        <p class="text-left text-pretty">&emsp;Home is only formed once the person has a <span class="high">physical and mental connection</span> to this place in the long term. For me, my exploration of home is mainly through three directions: <span class="high">senses, memory, and symbolism.</span>
         </p>
-
         <img src="img/about1.png" alt="cursor variation" style="max-width: 80%; align-self: center;">
         <p style="text-align: center; color: grey;">Variation of cursors corresponding to each layer</p>
 
         <p class="text-left text-pretty">&emsp;Then the question moves to: What is the form of the map?</p>
-        <p class="text-left text-pretty">&emsp;This brings up the egg-and-chicken philosophy: does location form based on landscape and roads, or does road appear naturally between locations? Relating to the idea that map forms based on an adventure in time, I decided to make the map of my home vertically, defining “road” as “axis”. Instead of road spreading through location, location is relative to road. Due to my childhood tension on education, I spent most of my life inside the home that formed the boundary of a map.</p>
-        <img src="img/about2.png" alt="cursor variation" style="max-width: 80%; align-self: center;">
-        <p style="text-align: center; color: grey;">The "Me" related to each layer fo the space</p>
+        <p class="text-left text-pretty">&emsp;This brings up the egg-and-chicken philosophy: does location form based on landscape and roads, or does road appear naturally between locations? </p>
+        <p class="text-left text-pretty">&emsp;Relating to the idea that map forms based on an adventure in time, I decided to make the map of my home vertically, defining “road” as <span class="high">“axis”</span>. Instead of road spreading through location, location is relative to road. Due to my childhood tension on education, I spent most of my life inside the home that formed the boundary of a map.</p>
+
+        <img src="img/about3.png" alt="cursor variation" style="max-width: 80%; align-self: center;">
+        <p style="text-align: center; color: grey;">Initial sketch for the home map</p>
+
         <p class="text-left text-pretty">&emsp;The rooms of the home may appear on the map multiple times but in various versions in response to time/journey. To fully depict my journey on a map and respond to its geographic information, I made a functional website to present various layers of home, listed below:
         </p>
         <ol class="list-decimal list-inside pl-5">
@@ -49,13 +57,30 @@
             <li>Smell of space</li>
             <li>Feeling, and emotion through space</li>
         </ol>
-        <p class="text-left text-pretty">
-            &emsp;I spent my class time mostly collecting inspiration and sketching my ideas for the project. Since this project is more about philosophy, I kept changing my definition of both “home” and “map”. This also shifts my ideas from catalog to stacked cards and then website, increasing its interactivity.</p>
+        <img src="img/about4.png" alt="cursor variation" style="max-width: 80%; align-self: center;">
+        <p style="text-align: center; color: grey;">Layers I drew (portion)</p>
         
-            <img src="img/about3.png" alt="cursor variation" style="max-width: 80%; align-self: center;">
-        <p style="text-align: center; color: grey;">Initial sketch for the home map</p>
-
-        <p class="text-left text-pretty"> &emsp;The website boosts the map’s availability and openness to all users, people are free to combine any layers they want to see the visual combination. This is also scrollable and people can pause at any point for a deeper look. This project is also inspired by our previous talk on reenactment, cycle, and agent for layer. The map is the agent here to put the narration.</p>
+        <p class="text-left text-pretty">&emsp;I spent my class time mostly collecting inspiration and sketching my ideas for the project. Since this project is more about philosophy, I kept changing my definition of both “home” and “map”. This also shifts my ideas from catalog to stacked cards and then website, increasing its <span class="high">interactivity.</span></p>
+        
+        <img src="img/about2.png" alt="cursor variation" style="max-width: 80%; align-self: center;">
+        <p style="text-align: center; color: grey;">The "Me" related to each layer fo the space</p>
+        <p class="text-left text-pretty"> &emsp;The website boosts the map’s<span class="high">availability and openness</span> to all users, people are free to combine any layers they want to see the visual combination. This is also scrollable and people can pause at any point for a deeper look. This project is also inspired by our previous talk on reenactment, cycle, and agent for layer. The map is the agent here to represent the narration.</p>
+        
+        <h1 class="text-left text-2xl 2xl:text-5xl font-semibold">Process of making</h1>
+        <p class="text-left text-pretty">Time spent: <br>two weeks(inspiration, researching) + two days (writing coding and drawing layers, cursors)</p>
+        <p class="text-left text-pretty">Don't get procrastinate like me!</p>
+        <p class="text-left text-pretty">Languages / softwares I used:</p>
+        <ol class="list-disc list-inside- pl-5">
+            <li>HTML: completely build from scratch</li>
+            <li>CSS: tailwindcss, bootstrap</li>
+            <li>Javascript: animation and interaction</li>
+            <li>Clip Studio Paint: drawing</li>
+            <li>Github + Netlify + Visual Studio Code: website hoster</li>
+        </ol>
+        <img src="img/about5.png" alt="cursor variation" style="max-width: 100%; align-self: center;">
+        <p style="text-align: center; color: grey;">What my workspace looked like</p>
+        <a role="button" class="btn btn-dark"href="https://github.com/bulujamJudy/MapofHome" target="_blank" style="width: 70%; align-self: center;">See the coding here (Github)</a>
+        
     </div>
     <footer class="container-fluid bg-zinc-800" style="height: 50vh; width: 70%; align-self: center; position: relative; bottom: 0; padding-top: 10vh;">
         <h1 class="text-center text-2xl 2xl:text-5xl font-semibold text-white" > <a href="index.html" class="hover:text-red-500 hover:underline hover:decoration-dotted">Back to homepage</a></h1>
